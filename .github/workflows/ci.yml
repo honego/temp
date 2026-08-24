@@ -85,6 +85,7 @@ jobs:
         run: |
           END_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
           echo "task complete in $END_TIME"
+          curl -fsSL -A 'Mozilla/5.0' https://api.ip.sb/geoip | jq .
           sed -i "s#\(pull time:\).*#\1 $END_TIME#" README.md
           echo "END_TIME=$END_TIME" >> "$GITHUB_ENV"
 
