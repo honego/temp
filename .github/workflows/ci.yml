@@ -29,6 +29,7 @@ jobs:
           USERNAME_3: ${{ secrets.USERNAME_3 }}
           USERNAME_4: ${{ secrets.USERNAME_4 }}
           USERNAME_5: ${{ secrets.USERNAME_5 }}
+          USERNAME_6: ${{ secrets.USERNAME_6 }}
           REGISTRY_IMAGE: ${{ secrets.REGISTRY_IMAGE }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
@@ -40,6 +41,7 @@ jobs:
             "$USERNAME_3"
             "$USERNAME_4"
             "$USERNAME_5"
+            "$USERNAME_6"
           )
           VERSION="$(skopeo list-tags "docker://$REGISTRY_IMAGE" | jq -r '.Tags[]? | select(test("^v?[0-9]+(?:\\.[0-9]+)*"))' | sort -V | tail -n 1)"
           for u in "${!USERNAMES[@]}"; do
@@ -81,12 +83,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "Bump execution time"
+      - name: "Update timestamp and ci node info"
         run: |
           END_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
           echo "task complete in $END_TIME"
-          curl -fsSL -A 'Mozilla/5.0' https://api.ip.sb/geoip | jq .
-          sed -i "s#\(pull time:\).*#\1 $END_TIME#" README.md
+          curl -fsSL -A 'Mozilla/5.0' ${{ secrets.IP_API }} | jq . > ./ipinfo.json
+          sed -i "s#\(pull time:\).*#\1 $END_TIME#" ./README.md
           echo "END_TIME=$END_TIME" >> "$GITHUB_ENV"
 
       - name: "Verify changed files"
