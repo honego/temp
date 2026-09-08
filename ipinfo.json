@@ -1,7 +1,7 @@
 {
-  "ip": "20.169.72.164",
+  "ip": "172.182.195.233",
   "asn": 8075,
-  "org": "Microsoft Corporation",
+  "org": "Microsoft Limited",
   "continent": "NA",
   "country": "US",
   "region": "Arizona",
@@ -15,6 +15,6 @@
   "longitude": "-112.07404",
   "offset": -25200,
   "timezone": "America/Phoenix",
-  "colo": "LAX",
+  "colo": "SJC",
   "warp": "off"
 }
