@@ -1,7 +1,7 @@
 {
-  "ip": "20.98.140.121",
+  "ip": "130.131.255.208",
   "asn": 8075,
-  "org": "Microsoft Corporation",
+  "org": "Microsoft Limited",
   "continent": "NA",
   "country": "US",
   "region": "Iowa",
@@ -15,6 +15,6 @@
   "longitude": "-93.60911",
   "offset": -18000,
   "timezone": "America/Chicago",
-  "colo": "ORD",
+  "colo": "MSP",
   "warp": "off"
 }
