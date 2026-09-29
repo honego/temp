@@ -1,7 +1,7 @@
 {
-  "ip": "48.217.227.241",
+  "ip": "13.92.34.154",
   "asn": 8075,
-  "org": "Microsoft Limited",
+  "org": "Microsoft Corporation",
   "continent": "NA",
   "country": "US",
   "region": "Virginia",
@@ -15,6 +15,6 @@
   "longitude": "-77.41582",
   "offset": -14400,
   "timezone": "America/New_York",
-  "colo": "FRA",
+  "colo": "IAD",
   "warp": "off"
 }
