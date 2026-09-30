@@ -1,5 +1,5 @@
 {
-  "ip": "172.203.213.87",
+  "ip": "57.154.218.74",
   "asn": 8075,
   "org": "Microsoft Limited",
   "continent": "NA",
@@ -15,6 +15,6 @@
   "longitude": "-77.41582",
   "offset": -14400,
   "timezone": "America/New_York",
-  "colo": "IAD",
+  "colo": "EWR",
   "warp": "off"
 }
